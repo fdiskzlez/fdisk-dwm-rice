@@ -1,5 +1,5 @@
 # Dracula-Simple-dwm
-Simple DWM rice
+Simple dwm rice
 ![rice](https://user-images.githubusercontent.com/65056928/121053879-cedd7900-c789-11eb-958c-2e0e9510433b.png)
 To install this config for noobs, simply put the config.h file into your cloned dwm directory and compile it with `sudo make install clean`
 
