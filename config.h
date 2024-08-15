@@ -8,10 +8,10 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "tewi:size=12", "tewi:size=12" };
 static const char dmenufont[]       = "tewi:size=12";
 static const char col_1[]       = "#282a36";
-static const char col_2[]       = "#ffb86c";
-static const char col_3[]       = "#ff79c6";
-static const char col_4[]       = "#ffb86c";
-static const char col_5[]       = "#282a36";
+static const char col_2[]       = "#080105";
+static const char col_3[]       = "#b49caa";
+static const char col_4[]       = "#080105";
+static const char col_5[]       = "#a39cac";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_3, col_1, col_5 },
@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "main", "development", "other", };
+static const char *tags[] = { "Firefox ","Visual Studio Code 󰨞","Discord ","Vim ","Spotify ","Steam ","Thunar ","Other "};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -38,9 +38,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ ":3",      tile },    /* first entry is default */
 };
 
 /* key definitions */
@@ -56,8 +54,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_1, "-nf", col_3, "-sb", col_5, "-sf", col_4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+static const char *termcmd[]  = { "anterminal", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
